@@ -12,12 +12,11 @@
         <!-- CDNs de Font-Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
         <div id="app">
         
         </div>
-        <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
     </body>
 </html>
