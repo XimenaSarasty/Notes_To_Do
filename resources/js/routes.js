@@ -1,24 +1,33 @@
-const Home = () => import('./components/Home.vue')
-const Contacto = () => import('./components/Contacto.vue')
-//importamos los componentes para el blog
-const Mostrar = () => import('./components/usuario/Mostrar.vue')
-// const Crear = () => import('./components/usuario/Crear.vue')
-// const Editar = () => import('./components/usuario/Editar.vue')
+import Registro from './components/Registro.vue'
+import Login from './components/Login.vue';
+import Notas from './components/Notas.vue';
+import CrearNota from './components/CrearNota.vue'; 
+import EditarNota from './components/EditarNota.vue';
 
 export const routes = [
     {
-        name: 'home',
+        name: 'login',
         path: '/',
-        component: Home
+        component: Login
     },
     {
-        name: 'mostrarUsuarios',
-        path: '/usuarios',
-        component: Mostrar
+        name: 'registro',
+        path: '/registro',
+        component: Registro
     },
-     {
-        name: 'contacto',
-        path: '/contacto',
-        component: Contacto
+    {
+        name: 'notas',
+        path: '/notas',
+        component: Notas
+    },
+    {
+        name: 'crearNota',
+        path: '/notas/crear',
+        component: CrearNota 
+    },
+    {
+        name: 'editarNota',
+        path: '/notas/editar/:id',
+        component: EditarNota 
     }
 ]
